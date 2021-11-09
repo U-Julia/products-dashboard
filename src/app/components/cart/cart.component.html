@@ -1,0 +1,24 @@
+<div class="message" *ngIf="!products.length">
+  <p>Your cart is empty!</p>
+</div>
+
+<div class="page-content-container">
+  <div class="cart-container">
+    <div class="cart-item" *ngFor="let item of products">
+      <img [src]="item.img"/>
+      <div class="item-description">
+    <span>
+      {{ item.title }}
+    </span>
+        <span>
+      {{ item.discountCost || item.cost }}
+    </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn-clear btn btn-primary" *ngIf="products.length" (click)="clearCart()">
+  Clear cart
+</button>
+

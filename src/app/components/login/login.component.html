@@ -1,0 +1,28 @@
+<div class="login-container">
+  <div class="login">
+    <h5>Login form</h5>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <input type="email" class="form-control" formControlName="email" id="email" placeholder="E-mail">
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+           class="alert alert-danger">
+        <div *ngIf="email?.errors?.required">
+          This field is required.
+        </div>
+      </div>
+
+      <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password">
+      <div *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+           class="alert alert-danger">
+        <div *ngIf="password?.errors?.minlength">
+          Enter min 5 characters
+        </div>
+        <div *ngIf="password?.errors?.maxlength">
+          Enter only 10 characters
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+  </div>
+</div>

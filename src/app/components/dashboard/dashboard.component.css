@@ -1,0 +1,207 @@
+:host {
+  font-family: "Times New Roman", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #333;
+}
+
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 4px;
+  border: 2px solid #eee;
+  background-color: #fafafa;
+  width: 265px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 4px #ddd8d8;
+}
+
+.card.highlight-card {
+  background-color: #ffffff;
+  color: black;
+  position: relative;
+}
+
+.grey-color {
+  color: #b3aeae;
+}
+
+.img-conteiner {
+  width: 220px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd8d8;
+  position: relative;
+  margin-top: -30px;
+}
+
+.img-conteiner img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.new-product {
+  background-color: black;
+  color: white;
+  width: 65px;
+  height: 36px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  line-height: 30px;
+  position: absolute;
+  top: 45%;
+  right: 0;
+}
+
+.sale-product {
+  background-color: red;
+  color: white;
+  width: 65px;
+  height: 36px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  line-height: 30px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+}
+
+.buttons-block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.btn-add-to-card {
+  background-color: #faadbc;
+  padding: 5px;
+  color: #d90404;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px
+}
+
+.btn-view {
+  background-color: #eae8e8;
+  height: 40px;
+  width: 110px;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px
+}
+
+.cost-block {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
+.discount-cost {
+  color: red;
+  margin-left: 30px;
+  text-decoration: line-through;
+}
+
+.btn-load-more {
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  border: 1px solid grey;
+  border-radius: 3px
+}
+
+.position-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  /*background: #e0e0e0;*/
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded {
+  display: none;
+  transition: 0.3s opacity;
+  opacity: 0;
+}

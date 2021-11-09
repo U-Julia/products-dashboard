@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 400px;
+  font-family: "Times New Roman";
+}
+
+.cost-block {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 15px;
+  border-top: 2px solid #a9a8a8;
+}
+
+.discount-cost {
+  color: red;
+  margin-left: 30px;
+  text-decoration: line-through;
+}
+
+.btn-add-to-card {
+  width: 100px;
+}
+
+

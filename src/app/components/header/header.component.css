@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #d5eef6;
+  font-family: "Times New Roman";
+  font-size: 17px;
+}
+
+.cart {
+  float: right;
+  padding-top: 5px;
+  padding-right: 15px;
+  margin: 10px;
+  border: none;
+}
+
+.btn-rgstr {
+  width: 90px;
+  border: none;
+  float: right;
+  margin: 10px 10px 10px 0;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.btn-main {
+  float: right;
+  padding-top: 5px;
+  padding-right: 15px;
+  margin: 10px;
+  border: none;
+}
+
+.btn-rgstr a {
+  text-decoration: none;
+}
+
+.btn-login {
+  float: right;
+  margin: 9px 10px 0 0;
+  border: none;
+  color: #4aa5f1;
+  font-family: "Times New Roman";
+  font-size: 17px;
+}

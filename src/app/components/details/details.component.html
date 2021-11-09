@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="product-detail">
+    <img [src]="product?.img"/>
+    <h3>
+      {{product?.title}}
+    </h3>
+    <h6>
+      {{product?.description}}
+    </h6>
+    <div class="cost-block">
+      <p>
+        {{product?.discountCost || product?.cost}}
+      </p>
+      <div class="discount-cost">
+        <p>
+          {{product?.discountCost && product?.cost}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary btn-add-to-card" (click)="addToCart(product)">
+    Add to cart
+  </button>
+</div>
+

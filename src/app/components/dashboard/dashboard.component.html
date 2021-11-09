@@ -1,0 +1,43 @@
+<div class="content">
+  <div class="card highlight-card" *ngFor="let product of products">
+    <div class="img-conteiner">
+      <img [src]="product.img"/>
+      <div class="new-product" *ngIf="product.isNew">NEW</div>
+      <div class="sale-product" *ngIf="product.discountCost">SALE</div>
+    </div>
+    <h4>
+      {{product.title}}
+    </h4>
+    <p class="grey-color">
+      {{product.description}}
+    </p>
+    <div class="cost-block">
+      <h2>
+        {{product.discountCost || product.cost}}
+      </h2>
+      <h3 class="discount-cost">
+        {{product.discountCost && product.cost}}
+      </h3>
+    </div>
+    <div class="buttons-block">
+      <button class="btn btn-sm btn-add-to-card" (click)="addToCart(product)">
+        ADD TO CART
+      </button>
+      <button class="btn btn-sm btn-view" (click)="viewProduct(product)">
+        VIEW
+      </button>
+    </div>
+  </div>
+</div>
+<div class="position-btn">
+  <button class="btn btn-sm btn-load-more" *ngIf="showButton" (click)="getProducts()">
+    LOAD MORE
+  </button>
+</div>
+
+<div class="preloader" [class.loaded]="!loading">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>

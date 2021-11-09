@@ -1,0 +1,41 @@
+.message {
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman";
+  font-size: 25px;
+  width: 100%;
+}
+
+.page-content-container {
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  font-family: "Times New Roman";
+  margin-left: 20px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #ddd8d8;
+  margin: 10px;
+  padding: 10px;
+}
+
+.item-description {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.btn-clear {
+  margin-left: 350px;
+}
+

@@ -1,0 +1,21 @@
+<div class="header">
+  <nav>
+    <div>
+      <a class="btn-login" mat-button [matMenuTriggerFor]="menu">Login</a>
+      <mat-menu #menu="matMenu">
+        <div (click)="$event.stopPropagation()">
+          <app-login></app-login>
+        </div>
+      </mat-menu>
+    </div>
+    <div class="btn-rgstr">
+      <a routerLink="/registration">Registration</a>
+    </div>
+    <div class="cart">
+      <a routerLink="/cart">Cart</a>
+    </div>
+    <div class="btn-main">
+      <a routerLink="/">Dashboard</a>
+    </div>
+  </nav>
+</div>

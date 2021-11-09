@@ -1,0 +1,30 @@
+.form-control {
+  border: 1px solid #a9a7a7;
+  transition: .3s border-color;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #b7b5b5;
+  width: 500px;
+  padding: 20px;
+  font-family: "Times New Roman";
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+input.ng-touched.ng-invalid {
+  border-color: red;
+}
+
+
